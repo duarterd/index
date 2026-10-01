@@ -210,7 +210,7 @@ a:hover { color: var(--accent-2); }
 .hero-card-visual {
   width: 100%;
   aspect-ratio: 1;
-  border-radius: 14px;
+  border-radius: 50%;
   background: linear-gradient(145deg, var(--accent-soft) 0%, #D4EEF0 40%, var(--warm-soft) 100%);
   display: flex;
   align-items: center;
@@ -218,6 +218,15 @@ a:hover { color: var(--accent-2); }
   margin-bottom: 1.1rem;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,.08);
+}
+.hero-card-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 15%;
+  border-radius: 50%;
+  display: block;
 }
 .hero-card-visual svg {
   width: 70%;
@@ -1048,7 +1057,7 @@ function header(u){
     '<a class="btn" href="https://www.linkedin.com/in/ricardo-duarte-80/" rel="noopener">' + u.linkedin + '</a>' +
     '</div></div>' +
     '<div class="hero-card">' +
-    '<div class="hero-card-visual">' + ICO.data + '</div>' +
+    '<div class="hero-card-visual"><img src="ricardo-duarte.jpg" alt="Ricardo Duarte" width="280" height="280"></div>' +
     '<div class="hero-card-meta"><strong>' + u.based + '</strong><span>' + u.basedSub + '</span></div>' +
     '</div>' +
     '</div></div></header>';
